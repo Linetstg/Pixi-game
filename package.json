@@ -1,4 +1,5 @@
 {
+  "homepage": "https://linetstg.github.io/Pixi-game/",
   "name": "pixi-innovecs",
   "version": "0.0.0",
   "private": true,
@@ -7,7 +8,9 @@
     "start": "npm run dev",
     "build": "npm run lint && vite build",
     "lint": "eslint .",
-    "dev": "vite"
+    "dev": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "pixi.js": "^8.8.1"
@@ -15,9 +18,10 @@
   "devDependencies": {
     "@eslint/js": "^9.21.0",
     "@types/node": "^24.8.1",
-    "eslint": "^9.21.0",
+    "eslint": "^9.38.0",
     "eslint-config-prettier": "^10.1.2",
     "eslint-plugin-prettier": "^5.2.6",
+    "gh-pages": "^6.3.0",
     "prettier": "^3.5.3",
     "typescript": "^5.9.3",
     "vite": "^6.2.0"
